@@ -1,0 +1,16 @@
+/**
+ * Currency utility for Indian Rupee (INR) formatting
+ */
+export const formatCurrency = (amount) => {
+  if (amount === undefined || amount === null || isNaN(amount)) return '₹0';
+  return new Intl.NumberFormat('en-IN', {
+    style: 'currency',
+    currency: 'INR',
+    maximumFractionDigits: 0,
+  }).format(amount);
+};
+
+export const formatNumber = (num) => {
+  if (!num) return '0';
+  return new Intl.NumberFormat('en-IN').format(num);
+};
