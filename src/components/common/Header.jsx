@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link, useLocation as useRouteLocation } from 'react-router-dom';
-import { 
-  ChevronDown, 
-  Search, 
-  Percent, 
-  HelpCircle, 
-  User, 
-  ShoppingBag, 
+import {
+  ChevronDown,
+  Search,
+  Percent,
+  HelpCircle,
+  User,
+  ShoppingBag,
   Briefcase,
   ArrowUpRight
 } from 'lucide-react';
@@ -105,25 +105,22 @@ export const Header = ({ isLanding = false }) => {
         <div className="hidden lg:flex items-center gap-6">
           <Link
             to="/food"
-            className={`text-sm font-semibold transition-colors pb-1 border-b-2 ${
-              isFood ? 'text-[#fc8019] border-[#fc8019]' : 'text-gray-600 border-transparent hover:text-[#fc8019]'
-            }`}
+            className={`text-sm font-semibold transition-colors pb-1 border-b-2 ${isFood ? 'text-[#fc8019] border-[#fc8019]' : 'text-gray-600 border-transparent hover:text-[#fc8019]'
+              }`}
           >
             Food Delivery
           </Link>
           <Link
             to="/instamart"
-            className={`text-sm font-semibold transition-colors pb-1 border-b-2 ${
-              isInstamart ? 'text-[#5a2c91] border-[#5a2c91]' : 'text-gray-600 border-transparent hover:text-[#5a2c91]'
-            }`}
+            className={`text-sm font-semibold transition-colors pb-1 border-b-2 ${isInstamart ? 'text-[#5a2c91] border-[#5a2c91]' : 'text-gray-600 border-transparent hover:text-[#5a2c91]'
+              }`}
           >
             Instamart
           </Link>
           <Link
             to="/dineout"
-            className={`text-sm font-semibold transition-colors pb-1 border-b-2 ${
-              isDineout ? 'text-[#fc8019] border-[#fc8019]' : 'text-gray-600 border-transparent hover:text-[#fc8019]'
-            }`}
+            className={`text-sm font-semibold transition-colors pb-1 border-b-2 ${isDineout ? 'text-[#fc8019] border-[#fc8019]' : 'text-gray-600 border-transparent hover:text-[#fc8019]'
+              }`}
           >
             Dineout
           </Link>
@@ -139,15 +136,18 @@ export const Header = ({ isLanding = false }) => {
             <span>Corporate</span>
           </Link>
 
+
           <Link
             to="/search"
-            className={`flex items-center gap-2 text-sm font-semibold transition-colors ${
-              routeLocation.pathname === '/search' ? 'text-[#fc8019]' : 'text-gray-700 hover:text-[#fc8019]'
-            }`}
+            className={`flex items-center gap-2 text-sm font-semibold transition-colors -translate-x-1 sm:translate-x-0 ${routeLocation.pathname === '/search'
+              ? 'text-[#fc8019]'
+              : 'text-gray-700 hover:text-[#fc8019]'
+              }`}
           >
             <Search className="w-4 h-4 text-gray-500" />
             <span className="hidden sm:inline">Search</span>
           </Link>
+
 
           <Link
             to="/food?filter=offers"
@@ -241,12 +241,17 @@ export const Header = ({ isLanding = false }) => {
         >
           Dineout
         </Link>
+
         <Link
           to="/search"
-          className={`px-3 py-1 rounded-full ${routeLocation.pathname === '/search' ? 'bg-[#fc8019] text-white' : 'text-gray-600'}`}
+          className={`px-2 py-1 -translate-x-1 rounded-full whitespace-nowrap ${routeLocation.pathname === '/search'
+            ? 'bg-[#fc8019] text-white'
+            : 'text-gray-600'
+            }`}
         >
           Search
         </Link>
+
         <Link
           to={user ? "/account" : "#"}
           onClick={(e) => {
